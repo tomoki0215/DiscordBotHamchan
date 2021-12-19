@@ -25,7 +25,7 @@ async def on_voice_state_update(member, before, after):
         botRoom = client.get_channel(830452083680739339)
         announceChannelIds = [810832786659213316]
     if before.channel is not None and before.channel.id in announceChannelIds:
-            await botRoom.send("**" + before.channel.name + "** から、__" + member.name + "__  が抜けました！")
+        await botRoom.send("**" + before.channel.name + "** から、__" + member.name + "__  が抜けました！")
     if after.channel is not None and after.channel.id in announceChannelIds:
-            await botRoom.send("**" + after.channel.name + "** に、__" + member.name + "__  が参加しました！")
+        await botRoom.send("**" + after.channel.name + "** に、__" + member.name + "__  が参加しました！")
 client.run(token)
